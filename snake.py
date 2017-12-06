@@ -82,7 +82,7 @@ def snake_ran_out_of_bounds(snake):
     if snake[0][0] > GRID_WIDTH -1 or snake [0][0] < 0:
         return True
     elif snake[0][1] > GRID_HEIGHT -1 or snake[0][1] < 0:
-    return False
+        return False
 
 def snake_intersected_body(snake):
     """Returns whether the snake has ran into itself.
