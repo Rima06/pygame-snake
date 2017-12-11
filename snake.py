@@ -59,9 +59,9 @@ def create_food_position():
     The first element is the x position. Must be an int between 0 and GRID_WIDTH - 1, inclusively.
     The second element is the y position. Must be an int between 0 and GRID_HEIGHT - 1, inclusively.
     """
-    food_position = (x, y)
     y = random.randint(0, GRID_HEIGHT -1)
     x = random.randint(0, GRID_WIDTH -1)
+    food_position = (x, y)
     return (x, y)
 
 def snake_ate_food(snake, food):
