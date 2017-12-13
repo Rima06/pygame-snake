@@ -117,11 +117,10 @@ def get_snake_speed(snake):
     The speed at the beginning of the game should be 5. Once the snake has eaten 10 pieces of food,
     the speed of the game should increase (by how much is up to you).
     """
-    Count = 0
-    while snake_ran_out_of_bounds(snake) != True or snake_intersected_body(snake) != True:
-        if len(snake) % 5 == 0:
-            count += 1
-    return 5 * count
+    for bod in range(len(snake)):
+        if snake[0] == snake[bod]:
+            return True
+    return False
 
 def move_snake(snake, direction, food):
     """Moves the snake one space in the direction specified and returns whether food was eaten.
